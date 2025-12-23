@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Raíz Cuadrada por Separación de Pares</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📘 Raíz Cuadrada por Separación de Pares</h1>
+
+    <p>
+        Este método separa el número en pares y busca paso a paso
+        el número cuya raíz cuadrada se puede calcular.
+    </p>
+
+    <form method="POST">
+        <input type="number" name="numero" placeholder="Ej: 144" required>
+        <button>Calcular</button>
+    </form>
+
+    {% if resultado %}
+        <h2>✅ Resultado</h2>
+        <p>La raíz cuadrada es: <strong>{{ resultado }}</strong></p>
+
+        <h3>🧩 Pasos</h3>
+        <ul>
+            {% for paso in pasos %}
+                <li>{{ paso }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

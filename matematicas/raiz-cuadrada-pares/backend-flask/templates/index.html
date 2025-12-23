@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Raíz Cuadrada por Separación de Pares</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>📘 Raíz Cuadrada por Separación de Pares</h1>
+
+<p class="intro">
+Este método se usa para calcular raíces cuadradas paso a paso,
+separando el número en pares.
+</p>
+
+<!-- Ejemplos rápidos -->
+<div class="ejemplos">
+    <p><strong>Ejemplos rápidos:</strong></p>
+    <form method="POST">
+        <button name="numero" value="144">144</button>
+        <button name="numero" value="169">169</button>
+        <button name="numero" value="225">225</button>
+    </form>
+</div>
+
+<form method="POST" class="formulario">
+    <input type="number" name="numero" placeholder="Escribe un número" required>
+    <button>Calcular</button>
+</form>
+
+{% if resultado %}
+<hr>
+
+<h2>🔢 Número: {{ numero }}</h2>
+
+<h3>✂️ Separación en pares</h3>
+<div class="pares">
+    {% for par in pares %}
+        <span class="par">{{ par }}</span>
+    {% endfor %}
+</div>
+
+<h3>🧠 Pasos del método</h3>
+<ol>
+    {% for paso in pasos %}
+        <li class="paso">{{ paso }}</li>
+    {% endfor %}
+</ol>
+
+<h2 class="resultado">✅ Raíz cuadrada = {{ resultado }}</h2>
+
+<button onclick="mostrarExplicacion()">📄 Explicación para examen</button>
+
+<div id="explicacion" class="oculto">
+    <h3>📝 Explicación para examen</h3>
+    <p>
+        Para calcular la raíz cuadrada por separación de pares,
+        primero se agrupan las cifras de dos en dos empezando
+        desde la derecha. Luego se busca el mayor número cuyo
+        cuadrado no se pase del valor formado, y se repite el
+        proceso hasta terminar.
+    </p>
+</div>
+
+{% endif %}
+
+<script>
+function mostrarExplicacion() {
+    document.getElementById("explicacion").classList.toggle("oculto");
+}
+</script>
+
+</body>
+</html>
