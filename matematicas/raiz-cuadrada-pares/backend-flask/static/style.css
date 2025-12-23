@@ -1,56 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    text-align: center;
-    padding: 20px;
+    margin: 20px;
+    background: #f4f4f9;
 }
 
-.intro {
-    font-size: 18px;
-}
-
-.formulario input, button {
-    padding: 10px;
-    font-size: 16px;
-    margin: 5px;
-}
-
-.pares {
-    margin: 15px;
-}
-
-.par {
-    display: inline-block;
-    background: #ffd966;
-    padding: 10px;
-    margin: 5px;
-    font-size: 20px;
-    border-radius: 5px;
-}
-
-.paso {
-    background: #e3f2fd;
-    margin: 8px;
-    padding: 8px;
-    border-left: 5px solid #2196f3;
+h1 {
+    color: #2c3e50;
 }
 
 .resultado {
-    color: green;
-    font-size: 24px;
-}
-
-.ejemplos button {
-    background: #81c784;
-}
-
-.oculto {
-    display: none;
-}
-
-#explicacion {
-    background: #fff3cd;
+    background: #e8f0fe;
+    border: 1px solid #a0c4ff;
     padding: 15px;
-    margin-top: 15px;
+    margin-top: 20px;
     border-radius: 8px;
+}
+
+li {
+    margin-bottom: 5px;
+    font-family: monospace;
 }
